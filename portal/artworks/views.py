@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def helloworld(request):
     return render(request, "posts/artwork.html")
+
+
+def index(request):
+    return render(request, "base.html")

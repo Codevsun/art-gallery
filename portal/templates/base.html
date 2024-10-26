@@ -3,22 +3,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>
-        {% block title %}Artworky{% endblock %}
-    </title>
-
+    <title>{% block title %}Artworky{% endblock %}</title>
     <link href="{% static 'src/styles.css' %}" rel="stylesheet">
-
 </head>
 <body>
-    {% block content %}
-
-    {% endblock %}
-</body> 
-{% block script %}
-
-{% endblock %}
-</html> 
+    <div class="min-h-screen bg-gray-100">
+        {% block content %}
+        <div class="bg-red-500 text-white p-4 text-center">
+            If you see this red, Tailwind is working!
+        </div>
+        {% endblock %}
+    </div>
+</body>
+</html>
